@@ -1,0 +1,10 @@
+.messages{
+    list-style-type: none;
+    padding-left:500px;
+}
+.form-control{
+width: 900px;
+}
+form{
+    padding-left: 500px;
+}
