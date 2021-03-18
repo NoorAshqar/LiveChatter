@@ -1,0 +1,13 @@
+.messages {
+  margin-left: 3.3vw;
+}
+.form-control {
+  width: 100%;
+}
+.input {
+  width: 88%;
+  height: 100%;
+  resize: none;
+  word-wrap: break-word;
+  overflow: hidden;
+}
