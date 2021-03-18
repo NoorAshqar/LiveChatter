@@ -22,6 +22,7 @@ const Channel = ({ user = null , db = null }) => {
     }, [db]);
     const handleonChange= e =>{
         setNewMessage(e.target.value)
+        e.target.style.height = "";e.target.style.height = e.target.scrollHeight + "px"
     }
     const handleonSubmit = e =>{
         e.preventDefault();
@@ -43,7 +44,7 @@ const Channel = ({ user = null , db = null }) => {
             ))}
         </ul>
         <form className="container-fluid fixed-bottom d-flex flex-nowrap" onSubmit={handleonSubmit}>
-           <textarea className="form-control input" type="text" value={newMessage} onChange={handleonChange} placeholder="message here"></textarea>
+           <textarea className="form-control input" rows="1" type="text" value={newMessage} onChange={handleonChange} placeholder="message here"></textarea>
            <button className="btn btn-primary" type="submit" aria-label="Sizing example input" disabled={!newMessage}>send</button>
         </form>
         </div>
