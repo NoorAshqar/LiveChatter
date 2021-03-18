@@ -37,7 +37,7 @@ const Channel = ({ user = null , db = null }) => {
         }
     }
     return (
-        <div className="container-fluid">
+        <div>
         <ul className="container-fluid d-flex flex-column justify-content-start align-items-start mb-5 messages">
             {messages.map(message=>(
                 <li key = {message.id}><Message {...message}/></li>
@@ -45,7 +45,7 @@ const Channel = ({ user = null , db = null }) => {
         </ul>
         <form className="container-fluid fixed-bottom d-flex flex-nowrap" onSubmit={handleonSubmit}>
            <textarea className="form-control input" rows="1" type="text" value={newMessage} onChange={handleonChange} placeholder="message here"></textarea>
-           <button className="btn btn-primary" type="submit" aria-label="Sizing example input" disabled={!newMessage}>send</button>
+           <button className="btn btn-success" type="submit" aria-label="Sizing example input" disabled={!newMessage}>send</button>
         </form>
         </div>
     )
