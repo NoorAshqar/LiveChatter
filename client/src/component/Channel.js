@@ -43,7 +43,7 @@ const Channel = ({ user = null , db = null }) => {
                 <li key = {message.id}><Message {...message}/></li>
             ))}
         </ul>
-        <form className="container-fluid fixed-bottom d-flex flex-nowrap" onSubmit={handleonSubmit}>
+        <form className="container-fluid fixed-bottom d-flex justify-content-center flex-nowrap" onSubmit={handleonSubmit}>
            <textarea className="form-control input" rows="1" type="text" value={newMessage} onChange={handleonChange} placeholder="message here"></textarea>
            <button className="btn btn-success" type="submit" aria-label="Sizing example input" disabled={!newMessage}>send</button>
         </form>

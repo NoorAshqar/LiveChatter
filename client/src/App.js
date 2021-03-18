@@ -63,7 +63,7 @@ function App() {
 
   return (
     <div className="App">
-      {user ? (<> <div className="container-fluid d-flex justify-content-end"> <button className='btn btn-danger m-2' onClick={signOut}>Sign out</button> </div> <Channel user={user} db={db}/> </>) : (            <div className="banner">
+      {user ? (<> <div className="d-flex justify-content-end"> <button className='btn btn-danger m-2' onClick={signOut}>Sign out</button> </div> <Channel user={user} db={db}/> </>) : (            <div className="banner">
                 <div className='container'>
                     <div className="row">
                         <div className="col-sm-6">

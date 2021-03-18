@@ -1,11 +1,11 @@
 .messages {
-  margin-left: 50px;
+  margin-left: 3.3vw;
 }
 .form-control {
   width: 100%;
 }
 .input {
-  width: 90%;
+  width: 88%;
   height: 100%;
   resize: none;
   word-wrap: break-word;
