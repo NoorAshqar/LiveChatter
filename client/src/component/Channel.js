@@ -22,6 +22,7 @@ const Channel = ({ user = null , db = null }) => {
     }, [db]);
     const handleonChange= e =>{
         setNewMessage(e.target.value)
+        e.target.style.height = "";e.target.style.height = e.target.scrollHeight + "px"
     }
     const handleonSubmit = e =>{
         e.preventDefault();
@@ -37,14 +38,14 @@ const Channel = ({ user = null , db = null }) => {
     }
     return (
         <div>
-        <ul className="messages">
+        <ul className="container d-flex flex-column align-items-start mb-5 messages">
             {messages.map(message=>(
                 <li key = {message.id}><Message {...message}/></li>
             ))}
         </ul>
-        <form onSubmit={handleonSubmit}>
-           <input className='form-control' type="text" value={newMessage} onChange={handleonChange} placeholder="message here"></input>
-           <button type="submit" className="btn btn-primary" aria-label="Sizing example input" disabled={!newMessage}>send</button>
+        <form className="container-fluid fixed-bottom d-flex justify-content-center flex-nowrap" onSubmit={handleonSubmit}>
+           <textarea className="form-control input" rows="1" type="text" value={newMessage} onChange={handleonChange} placeholder="message here"></textarea>
+           <button className="btn btn-success" type="submit" aria-label="Sizing example input" disabled={!newMessage}>send</button>
         </form>
         </div>
     )

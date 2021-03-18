@@ -11,18 +11,13 @@ const Message = ({
     photoURL='',
 }) =>{
     return (
-        <div className='message'>
-            {displayName ? <p>{displayName}</p> : null}
-            {
-                photoURL ? (
-                    <img src={photoURL} alt="Avatar" width={40} height={40} border-radius='25px' border='2px'/>
-                    ) : null}
-                {createdAt?.seconds ?(
-                    <span>
-                        {formatRelative(new Date(createdAt.seconds * 1000), new Date())}
-                    </span>
-                ) : null}
-                <p className='text'>{text}</p>
+        <div className='card text-white bg-success message'>
+            <div className="container d-flex justify-content-start align-items-center mt-2 space">
+                <img className="profile" src={photoURL || "https://icon-library.com/images/profile-icon/profile-icon-22.jpg"} alt="profile"></img>
+                <span className="userName">{displayName ? displayName : 'user not found'}</span>
+                <span className="time">{formatRelative(new Date(createdAt.seconds * 1000), new Date())}</span>
+            </div>
+            <p className='text'>{text}</p>
         </div>
     );
 };

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Channel from './component/Channel.js'
 import LandingPage from './component/Landingpage.js'
-import './component/Landingpage.css'
+// import './component/Landingpage.css'
+import './App.css'
 
 import firebase from 'firebase/app';
 import 'firebase/auth';
@@ -62,7 +63,7 @@ function App() {
 
   return (
     <div className="App">
-      {user ? (<> <button className='btn btn-primary' onClick={signOut}>Sign out</button> <Channel user={user} db={db}/> </>) : (            <div className="banner">
+      {user ? (<> <div className="d-flex justify-content-end"> <button className='btn btn-danger m-2' onClick={signOut}>Sign out</button> </div> <Channel user={user} db={db}/> </>) : (            <div className="banner">
                 <div className='container'>
                     <div className="row">
                         <div className="col-sm-6">
