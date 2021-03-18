@@ -36,15 +36,15 @@ const Channel = ({ user = null , db = null }) => {
         }
     }
     return (
-        <div>
-        <ul className="messages">
+        <div className="container-fluid">
+        <ul className="container-fluid d-flex flex-column justify-content-start align-items-start mb-5 messages">
             {messages.map(message=>(
                 <li key = {message.id}><Message {...message}/></li>
             ))}
         </ul>
-        <form onSubmit={handleonSubmit}>
-           <input className='form-control' type="text" value={newMessage} onChange={handleonChange} placeholder="message here"></input>
-           <button type="submit" className="btn btn-primary" aria-label="Sizing example input" disabled={!newMessage}>send</button>
+        <form className="container-fluid fixed-bottom d-flex flex-nowrap" onSubmit={handleonSubmit}>
+           <textarea className="form-control input" type="text" value={newMessage} onChange={handleonChange} placeholder="message here"></textarea>
+           <button className="btn btn-primary" type="submit" aria-label="Sizing example input" disabled={!newMessage}>send</button>
         </form>
         </div>
     )

@@ -1,28 +1,19 @@
-img{
-    border-radius: 19px;
+img {
+  border-radius: 19px;
 }
-.message{
- border: 2px solid #dedede;
+.message {
+  border: 2px solid #dedede;
   background-color: #f1f1f1;
   border-radius: 5px;
-  margin: 9px ;
+  margin: 9px;
   width: 800px;
   height: auto;
 }
-.message span{
-    float: left;
+.message span {
   color: #999;
   float: right;
 }
-.text{
-    /* float: right; */
-    /* padding-left: 200px; */
-}
-body{
-    background-image: url("https://wallpapercave.com/wp/wp4410800.jpg");
-    background-repeat: no-repeat;
-    -webkit-background-size: auto;
-  -moz-background-size: auto;
-  -o-background-size: auto;
-  background-size: auto;
+.text {
+  /* float: right; */
+  /* padding-left: 200px; */
 }

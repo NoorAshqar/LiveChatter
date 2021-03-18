@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Channel from './component/Channel.js'
 import LandingPage from './component/Landingpage.js'
-import './component/Landingpage.css'
+// import './component/Landingpage.css'
+import './App.css'
 
 import firebase from 'firebase/app';
 import 'firebase/auth';
