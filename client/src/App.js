@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Channel from './component/Channel.js'
+import LandingPage from './component/Landingpage.js'
+// import './component/Landingpage.css'
+import './App.css'
 
 import firebase from 'firebase/app';
 import 'firebase/auth';
@@ -34,7 +37,7 @@ function App() {
       }
     })
     return unsubscribe
-  }, [])
+  },)
 
 
 
@@ -56,11 +59,33 @@ function App() {
     }
   }
 
-  if (initializing) return "Loading ... ";
+  if (initializing) return 'loading...';
 
   return (
     <div className="App">
-      {user ? (<> <button onClick={signOut}>Sign out</button> <Channel user={user} db={db}/> </>) : (<button onClick={sighnInGoogle}>sign in with Google here</button>)}
+      {user ? (<> <div className="d-flex justify-content-end"> <button className='btn btn-danger m-2' onClick={signOut}>Sign out</button> </div> <Channel user={user} db={db}/> </>) : (            <div className="banner">
+                <div className='container'>
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <h1 className>
+                                welcome to LiveChatter
+                </h1>
+                            <p>
+                                sign in here to join our live chat
+                </p>
+                        </div>
+                        <div class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-primary" type="button" onClick={sighnInGoogle}><img src='https://i.imgur.com/c6b7gt0.png' width='20px' height="20px" /> Sign in with google</button>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+      )}
     </div>
   );
 }
