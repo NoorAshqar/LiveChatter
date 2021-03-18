@@ -38,7 +38,7 @@ const Channel = ({ user = null , db = null }) => {
     }
     return (
         <div>
-        <ul className="container-fluid d-flex flex-column justify-content-start align-items-start mb-5 messages">
+        <ul className="container d-flex flex-column align-items-start mb-5 messages">
             {messages.map(message=>(
                 <li key = {message.id}><Message {...message}/></li>
             ))}
